@@ -1,0 +1,64 @@
+
+<!-- <form #todoForm="ngForm" class="mb-5" 
+(ngSubmit)="onTodoAdd()">
+  <div class="card text-capitalize">
+    <div class="card-header">
+          <h2 class="m-0 font-weight-bold text-center">todo task by service</h2>
+    </div>
+    <div class="card-body">
+        <div class="form-group">
+            <label for="todoItem"><strong>TodoItem :</strong></label>
+            <input type="text" class="form-control" 
+            #todoItem="ngModel" ngModel required name="todoitem">
+        </div>
+        
+        <ng-container
+        *ngIf="todoItem.touched && todoItem.hasError('required')">
+            <p class="alert alert-danger text-danger m-0">todoItem field is requried</p>
+        </ng-container>
+
+    </div>
+    <div class="card-footer">
+        <button class="btn btn-info btn-sm btn-block" [disabled]="todoForm.invalid">
+            Add Todo
+        </button>
+    </div>
+  </div>
+</form> -->
+
+<form #todoForm="ngForm" class="mb-5" 
+(ngSubmit)="onTodoAdd()">
+  <mat-card class="card text-capitalize">
+    <mat-card-title>
+          <h2 class="m-0 font-weight-bold text-center">todo task by service</h2>
+    </mat-card-title>
+    <mat-card-content>
+        <!-- <div class="form-group">
+            <label for="todoItem"><strong>TodoItem :</strong></label>
+            <input type="text" class="form-control" 
+            #todoItem="ngModel" ngModel required name="todoitem">
+        </div> -->
+
+        <mat-form-field class="example-full-width w-100" appearance="fill">
+
+            <mat-label> <strong>TodoItem :</strong> </mat-label>
+            <input matInput placeholder="Ex. Angular" value="Angular"  #todoItem="ngModel" 
+            ngModel name="todoitem" required>
+          </mat-form-field>
+        
+        <ng-container
+        *ngIf="todoItem.touched && todoItem.hasError('required')">
+            <p class="alert alert-danger text-danger m-0">todoItem field is requried</p>
+        </ng-container>
+
+    </mat-card-content>
+    <mat-card-actions>
+        <button  mat-raised-button color="accent" 
+        class="btn-sm btn-block" [disabled]="todoForm.invalid">
+            Add Todo
+        </button>
+    </mat-card-actions>
+</mat-card>
+</form>
+
+

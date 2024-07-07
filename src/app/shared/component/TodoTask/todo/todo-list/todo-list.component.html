@@ -1,0 +1,40 @@
+<!-- 
+<ul class="list-group">
+    <li class="list-group-item d-flex justify-content-between"
+    *ngFor="let todo of todos">
+        {{todo.todoitem}}
+
+        <div class="button-group">
+            <button class="btn btn-outline-primary btn-sm">
+                Edit
+            </button>
+            <button class="btn btn-outline-danger btn-sm ml-2"
+            (click)="onRemoveTodo(todo)">
+                Remove
+            </button>
+        </div>
+    </li>
+</ul> -->
+
+
+<mat-card>
+    <mat-list role="list">
+        <div class="list-group">
+            <mat-list-item role="listitem" *ngFor="let todo of todos">
+                {{todo.todoitem}}
+        
+                <div class="button-group margin">
+                    <button mat-raised-button color="primary">
+                        Edit
+                    </button>
+                    <button  mat-raised-button color="warn" class="ml-2"
+                    (click)="onRemoveTodo(todo)">
+                        Remove
+                    </button>
+                </div>
+                <mat-divider></mat-divider>
+            </mat-list-item>
+         
+        </div>
+      </mat-list>
+</mat-card> 

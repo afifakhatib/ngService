@@ -1,0 +1,41 @@
+
+
+<form #stdForm="ngForm" (ngSubmit)="onStdAdd()">
+    <mat-card class="p-4 mb-5 mb-md-0">
+        <mat-card-header>
+            <h1>Student Task By Service</h1>
+        </mat-card-header>
+        <mat-card-content>
+
+            <mat-form-field class="example-full-width" appearance="fill" class="d-block">
+                <mat-label>First Name</mat-label>
+                <input matInput placeholder="Ex.Jhon" required 
+                #fname="ngModel" ngModel id="fname" name="fname">
+              </mat-form-field>
+
+              <mat-form-field class="example-full-width" appearance="fill" class="d-block">
+                <mat-label>Last Name</mat-label>
+                <input matInput placeholder="Ex.Doe" required 
+                #lname="ngModel" ngModel id="lname" name="lname">
+              </mat-form-field>
+
+              <mat-form-field class="example-full-width" appearance="fill" class="d-block">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Ex.jd@gmail.com" required 
+                #email="ngModel" ngModel id="email" name="email">
+              </mat-form-field>
+
+              <mat-form-field class="example-full-width" appearance="fill" class="d-block">
+                <mat-label>Contact</mat-label>
+                <input matInput placeholder="Ex.12345678" required 
+                #contact="ngModel" ngModel id="contact" name="contact">
+              </mat-form-field>
+              
+        </mat-card-content>
+        <mat-card-actions>
+            <button class="btn-sm btn-block" mat-raised-button color="accent" [disabled]="stdForm.invalid">
+                Add Student Info
+            </button>
+        </mat-card-actions>
+    </mat-card>
+</form>
